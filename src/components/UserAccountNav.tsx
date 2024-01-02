@@ -33,6 +33,7 @@ const UserAccountNav: FC<UserAccountNavProps> = ({ user }) => {
         </div>
         <DropdownMenuSeparator />
 
+        {/* Dropdown Menu Items */}
         <DropdownMenuItem>
           <Rss className="mr-2 h-4 w-4" />
           <Link href="/">Feed</Link>
@@ -50,6 +51,7 @@ const UserAccountNav: FC<UserAccountNavProps> = ({ user }) => {
 
         <DropdownMenuSeparator />
 
+        {/* Logout Button  */}
         <DropdownMenuItem
           onSelect={(event) => {
             event.preventDefault()
