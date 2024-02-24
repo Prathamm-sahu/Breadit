@@ -20,7 +20,7 @@ export async function POST(req: Request) {
         name
       }
     })
-
+    
     if(subredditsExists) {
       return new Response('Subreddit already exists', { status: 409 })
     }

@@ -15,7 +15,7 @@ const Page = () => {
   const [input, setInput] = useState("");
   const router = useRouter();
   const { loginToast } = useCustomToast()
-
+  
   const { mutate: createCommunity, isLoading } = useMutation({
     mutationFn: async () => {
       const payload: CreateSubredditPayload = {
