@@ -55,6 +55,7 @@ const PostVoteClient: FC<PostVoteClientProps> = ({postId, initialVotesAmt, initi
         variant: 'destructive',
       })
     },
+    // Usimg onMutate for optimistic updates
     onMutate: (type: VoteType) => {
       if (currentVote === type) {
         // User is voting the same way again, so remove their vote
