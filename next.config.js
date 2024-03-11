@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['uploadthing.com', 'lh3.googleusercontent.com'],
-  },
-  i18n: {
-    localeDetection: false,
+    remotePatterns: [{
+      protocol: "https",
+      hostname: "lh3.googleusercontent.com"
+    },
+    {
+      protocol: "https",
+      hostname: "utfs.io"
+    }
+  ],
   },
 }
 
