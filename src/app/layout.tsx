@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
 import { Toaster } from "@/components/ui/Toaster";
+import { getAuthSession } from "@/lib/auth";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
@@ -12,11 +13,12 @@ export const metadata = {
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getAuthSession()
   return (
     <html
       lang="en"
@@ -26,7 +28,7 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-screen pt-12 bg-slate-50 antialiased">
-        <Providers>
+        <Providers session={session}>
           {/* @ts-expect-error server component */}
           <Navbar />
           <Toaster />
