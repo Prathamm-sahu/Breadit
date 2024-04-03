@@ -94,6 +94,7 @@ model Post {
   votes       Vote[]
 }
 
+
 model Comment {
   id        String   @id @default(cuid())
   text      String
