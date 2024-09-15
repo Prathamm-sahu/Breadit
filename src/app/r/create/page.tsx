@@ -10,6 +10,8 @@ import axios, { AxiosError } from "axios";
 import { toast } from "@/hooks/use-toast";
 import { useCustomToast } from "@/hooks/use-custom-toast";
 
+// FIX: Don't allow users to add space between name when they create subreddit add client side validation.
+
 const Page = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [input, setInput] = useState("");
