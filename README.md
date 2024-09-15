@@ -1,6 +1,4 @@
-<p align='center'><img src='public/favicon.ico' width="150" ></p>
-
----
+<p align='center'><img src='public/favicon.ico' width="80" ></p>
 
 # 🥖 Breadit - Social News Aggregation Website
 
